@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.buttonload {
+  background-color: #04AA6D; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 24px; /* Some padding */
+  font-size: 16px; /* Set a font-size */
+ text-align: center;
+  margin: 0 auto;
+}
+
+/* Add a right margin to each icon */
+/* Add a right margin to each icon */
+.fa {
+  margin-left: -12px;
+  margin-right: 8px;
+}
+body{
+  background-color: gray;
+}
+
+</style>
+</head>
+<body>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i> Please wait converting deleted item to Internet data
+</button>
+
+<script>
+let seconds = 6;
+let interval;
+
+let button = document.querySelector('.buttonload');
+button.innerHTML = `<i class="fa fa-spinner fa-spin"></i> Converting deleted bytes to Internet data`;
+
+interval = setInterval(() => {
+    seconds--;
+
+    if (seconds < 0) {
+        clearInterval(interval);
+        button.innerHTML = `<i class="fa fa-check"></i> You have 10mb internet connection.`;
+    }
+}, 1000);
+</script>
+
+
+</body>
+</html>
